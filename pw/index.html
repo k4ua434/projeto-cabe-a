@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauã programação web</title>
+    <style>
+        body {
+             background: url(blaze.jpg);
+             background-size: cover; /* garante bque a imagem cubra toda a area disponivel*/
+             background-position: center; /* centraliza a imagem do fundo*/
+             background-repeat: no-repeat; /* evita a repetição de imagem*/
+             font-family: Arial, sans-serif;
+             text-align: center;
+             margin: 300px;
+             color:rgb(11, 233, 233);
+        }
+        #nomeInput {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #exibirnome {
+            margin-top: 20px;
+            font-size: 18;
+            color: greenyellow;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 10px 20px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            transition: backgraud-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+   <h1>Kauã ferreira</h1>
+   <h3>Escola Professor Pedro Saturnino de Magalhães</h3>
+   <h3>Programação web</h3>
+   <h2>digite seu nome:</h2> 
+   <input type="text"id="nomeInput" placeholder="Digite Seu Nome">
+   <button onclick="exibirNome()">nome</button>
+   <div id="exibirNome"></div>
+   <script>
+       // Definindo a função 'exibir nome'
+       function exibirNome() {
+            var nome = document.getElementById('nomeInput').value;
+            //obtendo o valor digitado na caixa de texto com o ID 'nomeinput'
+            var mensagem  = "Olá, " + nome + "!";
+            //criando uma mensagem de saudação com o nome obtido
+            document.getElementById('exibirNome'). innerText = mensagem;
+            //exibindo a mensagem na area com id 'exibirnome'
+        }
+   </script>
+  
+</body>
+</html>
